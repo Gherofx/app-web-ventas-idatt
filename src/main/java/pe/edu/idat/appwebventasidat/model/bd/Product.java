@@ -20,16 +20,17 @@ public class Product {
     private Double unitprice;
     @Column(name = "unitsinstock")
     private Integer unitsinstock;
+    @Column(name = "unitsonorder")
+    private Integer unitsonorder;
     @Column(name = "reorderlevel")
     private Integer reorderlevel;
     @Column(name = "discontinued")
     private Boolean discontinued;
-
-
     @ManyToOne
     @JoinColumn(name = "supplierid")
     private Supplier supplier;
     @ManyToOne
-    @JoinColumn(name="categoryid")
+    @JoinColumn(name = "categoryid")
     private Category category;
+
 }
